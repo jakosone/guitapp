@@ -1,0 +1,16 @@
+{
+	"one": "[x][ ][ ][ ][ ]",
+	"two": "[ ][x][ ][ ][ ]",
+	"three": "[ ][ ][x][ ][ ]",
+	"four": "[ ][ ][ ][x][ ]",
+	"onetwo": "[x][x][ ][ ][ ]",
+	"onethree": "[x][ ][x][ ][ ]",
+	"onefour": "[x][ ][ ][x][ ]",
+	"twothree": "[ ][x][x][ ][ ]",
+	"twofour": "[ ][x][ ][x][ ]",
+	"threefour": "[ ][ ][x][x][ ]",
+	"onethreefour": "[x][ ][x][x][ ]",
+	"onetwofour": "[x][x][ ][x][ ]",
+	"twofourfive": "[ ][x][ ][x][x]",
+	"twothreefive": "[ ][x][x][ ][x]"
+}

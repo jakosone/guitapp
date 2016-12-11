@@ -1,0 +1,196 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:Georgia, serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-weight:700;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+    color:#dddddd;
+    font-family: 'Lobster', cursive;
+    text-shadow: 1px 1px #2d2d2d;
+}
+
+body {
+	font-family: 'Archivo Narrow', sans-serif;
+}
+
+#header {
+	background-color:#bababa;
+	font-size:5vw;
+}
+
+#footer {
+	background-color:black;
+	font-size:12px;
+	color:white;
+	text-shadow: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+}
+
+#main {
+	background-color:white;
+}
+
+/*Erikseen staget basso- ja kitara-json-latauksille*/
+
+#stage,#bstage {
+	font-family:monospace;
+}
+
+#button {
+	font-size: 18px;
+	border-radius: 20%;
+	background-color: #afafaf;
+	color: #e8e8e8;
+	//font-family: 'Pompiere', cursive;
+	text-shadow: 1px 2px #3d3d3d;
+	box-shadow: 0 5px #6b6b6b;
+}
+
+#button:hover {background-color: #8e8e8e}
+
+#button:active {
+	background-color: #689ec9;
+	box-shadow: 0 5px #515151;
+	transform: translateY(2px);
+}
+
+#main {
+	background-color: #f2f2f2;
+}
+
+img {
+
+	max-width:100%;
+}
+
+/*Sointukuvien muotoilu.*/
+
+#amaj,#bmaj,#cmaj,#dmaj,#emaj,#fmaj,#gmaj,#amin,#bmin,#cmin,#dmin,#emin,#fmin,#gmin,
+#uamaj,#ubmaj,#ucmaj,#udmaj,#uemaj,#ufmaj,#ugmaj,#uamin,#ubmin,#ucmin,#udmin,#uemin,#ufmin,#ugmin {
+	
+	width:150px;
+	height:250px;
+}
+
+#ulamaj,#ulbmaj,#ulcmaj,#uldmaj,#ulemaj,#ulfmaj,#ulgmaj,#ulamin,#ulbmin,#ulcmin,#uldmin,#ulemin,#ulfmin,#ulgmin {
+	
+	width:150px;
+	height:250px;
+	transform:scale(-1,1);
+}
+
+#lamaj,#lbmaj,#lcmaj,#ldmaj,#lemaj,#lfmaj,#lgmaj,#lamin,#lbmin,#lcmin,#ldmin,#lemin,#lfmin,#lgmin {
+	width:150px;
+	height:250px;
+	transform:scale(-1,1);
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
