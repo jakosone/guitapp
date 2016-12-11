@@ -150,14 +150,10 @@ img {
 	height:250px;
 }
 
+/*Kääntää vasenkätiset ukulelesoinnut peilikuvaksi.*/
+
 #ulamaj,#ulbmaj,#ulcmaj,#uldmaj,#ulemaj,#ulfmaj,#ulgmaj,#ulamin,#ulbmin,#ulcmin,#uldmin,#ulemin,#ulfmin,#ulgmin {
 	
-	width:150px;
-	height:250px;
-	transform:scale(-1,1);
-}
-
-#lamaj,#lbmaj,#lcmaj,#ldmaj,#lemaj,#lfmaj,#lgmaj,#lamin,#lbmin,#lcmin,#ldmin,#lemin,#lfmin,#lgmin {
 	width:150px;
 	height:250px;
 	transform:scale(-1,1);
